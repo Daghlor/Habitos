@@ -15,8 +15,8 @@ return new class extends Migration
             $table->bigIncrements('id')->unsigned();
             $table->string('unique_id', 50)->unique();
             $table->string('name');
-            $table->string('lastname');
-            $table->bigInteger('phone')->unique();
+            $table->string('lastname')->nullable();
+            $table->bigInteger('phone')->unique()->nullable();
             $table->bigInteger('identify')->unique();
             $table->string('dateBirth', 40)->nullable();
             $table->string('email')->unique();
